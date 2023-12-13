@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prédiction du Genre Musical</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            text-align: center;
+            background-image: url('https://us.123rf.com/450wm/noomubon/noomubon1907/noomubon190700430/126560256-vue-de-dessus-table-en-bois-il-y-a-des-cahiers-des-crayons-des-chapeaux-des-%C3%A9couteurs-et-un.jpg?ver=6');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+        }
+
+        h1 {
+            color: #ffffff;
+            margin-top: 100px;
+        }
+
+        form {
+            max-width: 400px;
+            margin: 20px auto;
+            background-color: #c8ad7f;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+
+        h2 {
+            color: #333;
+            text-align: center;
+        }
+
+        input[type="file"] {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+            box-sizing: border-box;
+            text-align: center;
+        }
+
+        input[type="submit"] {
+            background-color: #582900;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            text-align: center;
+        }
+
+        input[type="submit"]:hover {
+            background-color: #582900;
+        }
+
+        p {
+            color: #8b0000;
+            margin-top: 10px;
+            font-family: 'Arial', sans-serif;
+            text-align: center;
+          
+        }
+    </style>
+</head>
+<body>
+    <h1>Prédiction du Genre Musical</h1>
+    <form action="/upload" method="post" enctype="multipart/form-data">
+        <h2 for="data">Sélectionnez un fichier :</h2>
+        <input type="file" name="musicFile" id="musicFile" accept=".wav" required>
+        <br><br>
+        <input type="submit" value="Prédire le Genre">
+        <br><br>
+        <p>{{result}}</p>
+    </form>
+    <div></div>
+</body>
+</html>
